@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <title> Introducão ao NodeJS</title>
+    </head> 
+    <body>
+        <h1> Criando modelos do MVC</h1>
+        <p> imprimindo resultados </p>
+        <ul>
+        <% for(var chave in clientes){ %>
+            <li> <%= clientes[chave].nome %> - <%= clientes[chave].email %></li>
+            <% } %>
+        </ul>
+    </body>
+</html>
