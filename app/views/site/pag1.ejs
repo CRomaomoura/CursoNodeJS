@@ -5,12 +5,31 @@
         <title> Introducão ao NodeJS</title>
     </head> 
     <body>
-        <h1> Criando modelos do MVC</h1>
-        <p> imprimindo resultados </p>
+    <fieldset>
+        <h1> Lista de cadastros</h1>
+    <fieldset>
+        <h2>Cadastro de clientes</h2>
+            <form action="/pag1" method="post">
+                <input type="text" name="nome" placeholder="Insira o nome">
+                <input type="text" name="email" placeholder="Insira o email">
+                <button>Adicionar</button>
+            </form>
+    </fieldset>
+        <p> Relação dos Clientes cadastrados: </p>
         <ul>
-        <% for(var chave in clientes){ %>
-            <li> <%= clientes[chave].nome %> - <%= clientes[chave].email %></li>
+        <% for(var c in clientes){ %>
+            <li> Nome: <%= clientes[c].nome %> - E-mail: <%= clientes[c].email %></li>
             <% } %>
         </ul>
+    </fieldset>
+<!--         
+        <% if(erros){ %>
+    <ul>
+        <% for(var k in erros.errors){ %>
+         <li><%= erros.errors[k].msg%></li>
+        <% } %>
+    </ul>
+    <% } %>
+    -->
     </body>
 </html>
